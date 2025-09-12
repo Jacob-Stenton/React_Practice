@@ -1,4 +1,4 @@
-import ChatMessage from "./ChatMessages";
+import ChatMessage from "./ChatMessage";
 
 interface Chat {
   id: string | number;

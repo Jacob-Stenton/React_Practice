@@ -2,9 +2,6 @@ import React from "react";
 import ChatHistory from "./components/ChatHistory";
 import ChatInput from "./components/ChatInput";
 
-
-
-
 function App() {
   const [chatMessageHistory, setChatMessageHistory] = React.useState([
     {
@@ -39,10 +36,21 @@ function App() {
     },
   ]);
 
+  function addMessage(message: string) {
+    setChatMessageHistory((prevChats) => [
+      ...prevChats,
+      {
+        id: crypto.randomUUID(),
+        message,
+        user: "Jacob",
+      },
+    ]);
+  }
+
   return (
     <>
       <ChatHistory chats={chatMessageHistory} />
-      <ChatInput />
+      <ChatInput onSend={addMessage} />
     </>
   );
 }

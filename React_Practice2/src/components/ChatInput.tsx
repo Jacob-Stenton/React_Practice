@@ -14,18 +14,20 @@ const ChatInput = ({ onSend }: Props) => {
   };
 
   return (
-    <>
+    <div className="input-container">
       <input
         name="chatInput"
+        className="chat-input"
         value={message}
         placeholder="Type message here"
         onChange={(e) => {
           setMessage(e.target.value);
         }}
-        size={40}
       />
-      <button onClick={handleSend}>send</button>
-    </>
+      <button className="send-button" onClick={handleSend}>
+        Send
+      </button>
+    </div>
   );
 };
 

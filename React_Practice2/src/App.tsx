@@ -1,6 +1,7 @@
 import React from "react";
 import ChatHistory from "./components/ChatHistory";
 import ChatInput from "./components/ChatInput";
+import "./App.css";
 
 function App() {
   const [chatMessageHistory, setChatMessageHistory] = React.useState([
@@ -48,10 +49,10 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app-container">
       <ChatHistory chats={chatMessageHistory} />
       <ChatInput onSend={addMessage} />
-    </>
+    </div>
   );
 }
 

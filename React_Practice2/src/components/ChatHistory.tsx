@@ -1,3 +1,4 @@
+import React, { useRef } from "react";
 import ChatMessage from "./ChatMessage";
 
 interface Chat {
@@ -11,8 +12,16 @@ interface Props {
 }
 
 const ChatHistory = ({ chats }: Props) => {
+  const chatMessagesRef = React.useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
+    const containerElem = chatMessagesRef.current;
+    if (containerElem) {
+      containerElem.scrollTop = containerElem.scrollHeight;
+    }
+  }, [chats]);
+
   return (
-    <>
+    <div className="chat-history-container" ref={chatMessagesRef}>
       {chats.map((chatMessage) => {
         return (
           <ChatMessage
@@ -22,7 +31,7 @@ const ChatHistory = ({ chats }: Props) => {
           />
         );
       })}
-    </>
+    </div>
   );
 };
 

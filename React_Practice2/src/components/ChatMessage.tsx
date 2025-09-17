@@ -5,9 +5,11 @@ interface MessageProps {
 
 const ChatMessage = ({ message, user }: MessageProps) => {
   return (
-    <div>
-      <h1>{user}</h1>
-      <p>{message}</p>
+    <div
+      className={user === "Jacob" ? "chat-message-jacob" : "chat-message-maddy"}
+    >
+      <div className="message-user-name">{user}</div>
+      <div className="user-message">{message}</div>
     </div>
   );
 };

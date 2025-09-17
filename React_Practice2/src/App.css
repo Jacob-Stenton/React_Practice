@@ -1,0 +1,85 @@
+body {
+    font-family:'Times New Roman';
+    background-color: rgb(10, 10, 10);
+    margin: 0;
+}
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    margin:auto;
+    background-color: rgb(20, 20, 20);
+    border-radius: 20px;
+    height: 100vh;
+}
+
+.input-container {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    
+}
+
+.send-button{
+    background-color: rgb(236, 94, 0);
+    color: black;
+    padding: 11px 25px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 18px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.chat-input {
+    padding: 10px 25px;
+    border-radius: 18px;
+    font-size: 15px;
+    border-color:rgb(236, 94, 0) ;
+    border-width: 1px;
+    flex-grow: 1;
+}
+
+.chat-history-container{
+
+    flex-grow: 1;
+    justify-content: end;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.chat-message-jacob {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+}
+
+.chat-message-maddy {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.message-user-name {
+    font-size: 15px;
+    margin: 5px 22px;
+    margin-top: 10px;
+    color: white;
+}
+
+.user-message {
+    overflow-wrap: break-word;
+    font-size: 18px;
+    background-color: rgb(236, 94, 0);
+    margin: 0px 20px;
+    padding: 10px 10px;
+    border-radius: 15px;
+    max-width: 65%;
+}
+
+
+
